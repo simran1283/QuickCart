@@ -11,8 +11,6 @@ export const ProductList = () => {
     const [skip, setSkip] = useState(0)
     const [more, setMore] = useState(true)
     const limit = 10
-  
-    
 
     const fetchdata = async () => {
         api(limit, skip)

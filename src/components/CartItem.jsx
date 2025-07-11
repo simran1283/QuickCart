@@ -36,11 +36,11 @@ export const Carditem = (props) => {
                                     <Card.Body>
                                         <Card.Text className="fw-bold line-clamp-2 mb-1">{item.title} | {item.description}</Card.Text>
                                         <Card.Text className="mb-1" style={{ color: "#FFD43B" }}><FontAwesomeIcon icon={faStar} /> {item.rating}</Card.Text>
-                                        <Card.Text>
+                                        <Card.Text className="one-line">
                                             <span className="fw-bold">₹{item.price} </span>
                                             <span className="text-decoration-line-through fw-semibold text-muted me-2">₹{(item.price / (1 - (item.discountPercentage) / 100)).toFixed(0)}</span>
                                             <span className="fw-bold" style={{ color: "rgb(17, 197, 95)" }}>({item.discountPercentage}% off)</span></Card.Text>
-                                        <Card.Text className="mb-1">FREE {item.shippingInformation}</Card.Text>
+                                        <Card.Text className="mb-1 one-line">FREE {item.shippingInformation}</Card.Text>
                                         <Button variant="warning" className="fw-bold " style={{ width: "100%", backgroundColor: inCart ? "rgba(255,0,0,0.4)" : undefined }} onClick={() => { toggle(item.id) }}>{!inCart ? "Add to Cart" : "Remove from Cart"}</Button>
                                     </Card.Body>
                                 </Card>

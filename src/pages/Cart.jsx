@@ -35,10 +35,10 @@ export const Cart = () => {
         <>
             <Header />
             {cart.length == 0 ? <p className="text-light-emphasis" style={{textAlign :"center"}}>It feels so light!!</p>: 
-            <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa",overflow :"hidden" }} className="d-flex flex-row justify-content-between ">
+            <div style={{ maxHeight: "92vh", backgroundColor: "#f8f9fa",overflow :"hidden" }} className="d-flex flex-row justify-content-between ">
                 <div className="h-100 w-100">
                     <h2 className="mx-4 my-4">Shopping Cart</h2>
-                    <div style={{ height: "85vh", overflowY: "auto", scrollbarWidth: "none" }}>
+                    <div style={{ height: "calc(92vh - 80px)", overflowY: "auto", scrollbarWidth: "none" ,paddingBottom :"20px"}}>
                         {cart.map((item) => (
                             <Card key= {item.id} className="d-flex flex-row justify-content-between align-items-center px-1 mx-3 my-3" style={{ height: "180px" }}>
                                 <div className="d-flex flex-row justify-content-between align-items-center">
